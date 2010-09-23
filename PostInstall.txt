@@ -1,0 +1,3 @@
+
+For more information on watir-proxy, see https://rubygems.org/gems/watir-proxy
+

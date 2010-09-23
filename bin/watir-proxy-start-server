@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+#
+#  Created by Taku AMANO on 2010-9-23.
+#  Copyright (c) 2010. All rights reserved.
+
+require 'rubygems'
+require File.expand_path(File.dirname(__FILE__) + "/../lib/watir-proxy")
+require "watir-proxy-start-server/cli"
+
+WatirProxyStartServer::CLI.execute(STDOUT, ARGV)

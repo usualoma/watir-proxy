@@ -1,0 +1,16 @@
+History.txt
+Manifest.txt
+PostInstall.txt
+README.rdoc
+Rakefile
+bin/watir-proxy-start-server
+lib/watir-proxy-start-server/cli.rb
+lib/watir-proxy.rb
+script/console
+script/destroy
+script/generate
+spec/spec.opts
+spec/spec_helper.rb
+spec/watir-proxy-start-server_cli_spec.rb
+spec/watir-proxy_spec.rb
+tasks/rspec.rake
