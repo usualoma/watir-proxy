@@ -29,7 +29,7 @@ module WatirProxy
     @@default_browser = :firefox
     @@default_drb_uri = 'druby://localhost:12444'
 
-    def self.browser(opts = {}, &block)
+    def self.browser(opts = {})
       drb, browser = nil, nil
       begin
         drb = DRbObject.new_with_uri(self.drb_uri(opts))
