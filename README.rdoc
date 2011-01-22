@@ -34,6 +34,22 @@ A DRB server program and client libraries for Watir.
 
 * sudo gem install watir-proxy
 
+== EXAMPLES:
+
+=== Create a profile
+
+  require 'rubygems'
+  require 'watir-proxy'
+
+  browser = WatirProxy::Server.browser(:type => :fx_with_profile, :driver => %{
+    profile = Selenium::WebDriver::Firefox::Profile.new
+    profile.add_extension('/path/to/firebug.xpi'), :firebug)
+    profile.assume_untrusted_certificate_issuer = false
+    Selenium::WebDriver.for :firefox, :profile => profile
+  })
+  browser.goto 'http://localhost/'
+
+
 == LICENSE:
 
 Copyright (c) 2010 Taku AMANO

@@ -78,11 +78,19 @@ module WatirProxy
 
     def browser(opts = {})
       @current_browser = opts[:type] || @current_browser
-      @browsers[@current_browser] ||= new_browser(@current_browser)
+      @browsers[@current_browser] ||= new_browser(@current_browser, opts[:driver])
     end
 
-    def new_browser(type)
-      Watir::Browser.new(type)
+    def new_browser(type, driver)
+      driver = case driver
+               when String
+                 eval driver
+               when nil
+                 type
+               else
+                 driver
+               end
+      Watir::Browser.new(driver)
     end
 
   end
